@@ -25,7 +25,7 @@ function getRandomInt(max) {
 numberGenerator()
 
 function numberGenerator() {
-    let numeriGenerati = []
+    numeriGenerati = []
     
     const numeriDaGenerare = 5
 
@@ -49,4 +49,10 @@ function numberGenerator() {
 setTimeout(function() {
     sezioneNumeri.classList.add('none');
     
-}, 2000);
+}, 1000);
+
+function userNumbers(params) {
+    numeriUtente = prompt("inserisci numero")
+}
+
+
