@@ -19,6 +19,11 @@
 const sezioneNumeri = document.querySelector('#numbers');
 let sezioneVisibile = true;
 
+let numeriGenerati = []
+let numeriUtente = []
+let punteggio = 0
+
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
 }
@@ -26,7 +31,7 @@ function getRandomInt(max) {
 numberGenerator()
 
 function numberGenerator() {
-    numeriGenerati = []
+   
     
     const numeriDaGenerare = 5
 
@@ -47,7 +52,14 @@ function numberGenerator() {
 }
 
 function userNumbers() {
-    numeriUtente = prompt("inserisci numero")
+    
+    numero = 0
+    while (numeriUtente.length <= numeriGenerati.length - 1) {
+        numero = prompt("dsa")
+        numeriUtente.push(numero)
+    }
+
+    
 }
 
 
