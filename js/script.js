@@ -16,11 +16,7 @@
 
 
 
-let numeriGenerati = []
-
-const numeriDaGenerare = 5
-
-const sezioneNumeri = document.querySelector('#numbers');
+const sezioneNumeri = document.querySelector('#numbers');   
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
@@ -29,6 +25,12 @@ function getRandomInt(max) {
 numberGenerator()
 
 function numberGenerator() {
+    let numeriGenerati = []
+    
+    const numeriDaGenerare = 5
+
+    
+
     while (numeriGenerati.length < numeriDaGenerare) {
         let numero = getRandomInt(10);
         if (!numeriGenerati.includes(numero)) {
