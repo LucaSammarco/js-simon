@@ -59,6 +59,14 @@ function userNumbers() {
         numeriUtente.push(numero)
     }
 
+    for (let index = 0; index < numeriGenerati.length; index++) {
+      
+        if (numeriGenerati.includes(numeriUtente)) {
+            punteggio++;
+        }
+        
+    }
+
     
 }
 
