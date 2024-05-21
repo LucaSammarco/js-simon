@@ -26,6 +26,8 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
 }
 
+numberGenerator()
+
 function numberGenerator() {
     while (numeriGenerati.length < numeriDaGenerare) {
         let numero = getRandomInt(10);
@@ -43,7 +45,6 @@ function numberGenerator() {
 
 
 setTimeout(function() {
-    console.log('Hello, world!');
+    sezioneNumeri.classList.add('none');
+    
 }, 2000);
-
-setInterval(numberGenerator,2000);
