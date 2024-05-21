@@ -1,45 +1,40 @@
 
+// ! Descrizione:
+// Visualizzare in pagina 5 numeri casuali.
+// Da lì parte un timer di 30 secondi.
+// Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
+
+//         // HC
+//             * Generiamo 5 numeri random controllando che siano unici v
+//             * Inseriamo in pagina i 5 numeri v
+//             * Impostiamo un timer che al termine del quale inserisca display:none al contenitore dei numeri.
+//             * 5 prompt all utente 
+//             * Verifichiamo se i numeri inseriti sono presenti nell array dei numeri e contiamo quanti sono uguali
+
+
+
+
 let numeriGenerati = []
 
 const numeriDaGenerare = 5
 
+const sezioneNumeri = document.querySelector('#numbers');
+
 function getRandomInt(max) {
-    return Math.floor(Math.random() * max + 1);
-  }
+    return Math.floor(Math.random() * max) + 1;
+}
 
-//   for (let index = 1; index <= 5; index++) {
-//     let numero = getRandomInt(10);
-//     numeriGenerati.push(numero)
-    
-//   }
-
-// while (numeriGenerati.length < 6) {
-//     let index = []
-// }
-
-
-// function generateUniqueNumbers(numeriDaGenerare) {
-//     let numero = [];
-//     while (numeriGenerati.length < numeriDaGenerare) {
-//         let  = getRandomInt(10);
-//         if (!bombsCells.includes(bombNum)) {
-//             bombsCells.push(bombNum);
-//         }
-//     }
-//     return bombsCells;
-// }
-
-
-  while (numeriGenerati.length <= numeriDaGenerare - 1 ) {
-    
+while (numeriGenerati.length < numeriDaGenerare) {
     let numero = getRandomInt(10);
-        if (!numeriGenerati.includes(numero)) {
-            numeriGenerati.push(numero)
-        }
-    
-  }
+    if (!numeriGenerati.includes(numero)) {
+        numeriGenerati.push(numero);
+    }
+}
 
-
-//   while (condition) {
-    
-//   }
+for (let index = 0; index < numeriGenerati.length; index++) {
+    const nuovoP = document.createElement('p');
+    nuovoP.textContent = numeriGenerati[index];
+    sezioneNumeri.appendChild(nuovoP);
+}

@@ -1,0 +1,28 @@
+.numeri {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-testo {
+   color:  red !important;
+}
+
+#numbers > p {
+
+    font-size: 5rem;
+    color: red;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
+body {
+    margin: 0 auto;
+}
+
+
+main {
+
+    height: 100%;
+}
