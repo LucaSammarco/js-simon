@@ -55,18 +55,19 @@ function userNumbers() {
     
     numero = 0
     while (numeriUtente.length <= numeriGenerati.length - 1) {
-        numero = prompt("dsa")
+        numero = parseInt(prompt("inserisci numero"));
         numeriUtente.push(numero)
     }
 
     for (let index = 0; index < numeriGenerati.length; index++) {
       
-        if (numeriGenerati.includes(numeriUtente)) {
+        if (numeriGenerati.includes(numeriUtente[index])) {
             punteggio++;
         }
         
     }
-
+    
+    alert("Hai indovinato: " + punteggio + " numeri!");
     
 }
 
@@ -80,5 +81,5 @@ function classeepromt() {
 }
 
 
-setTimeout(classeepromt, 1000);
+setTimeout(classeepromt, 30000);
 
