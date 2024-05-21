@@ -26,15 +26,24 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
 }
 
-while (numeriGenerati.length < numeriDaGenerare) {
-    let numero = getRandomInt(10);
-    if (!numeriGenerati.includes(numero)) {
-        numeriGenerati.push(numero);
+function numberGenerator() {
+    while (numeriGenerati.length < numeriDaGenerare) {
+        let numero = getRandomInt(10);
+        if (!numeriGenerati.includes(numero)) {
+            numeriGenerati.push(numero);
+        }
+    }
+    
+    for (let index = 0; index < numeriGenerati.length; index++) {
+        const nuovoP = document.createElement('p');
+        nuovoP.textContent = numeriGenerati[index];
+        sezioneNumeri.appendChild(nuovoP);
     }
 }
 
-for (let index = 0; index < numeriGenerati.length; index++) {
-    const nuovoP = document.createElement('p');
-    nuovoP.textContent = numeriGenerati[index];
-    sezioneNumeri.appendChild(nuovoP);
-}
+
+setTimeout(function() {
+    console.log('Hello, world!');
+}, 2000);
+
+setInterval(numberGenerator,2000);
