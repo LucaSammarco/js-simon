@@ -16,7 +16,8 @@
 
 
 
-const sezioneNumeri = document.querySelector('#numbers');   
+const sezioneNumeri = document.querySelector('#numbers');
+let sezioneVisibile = true;
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
@@ -45,14 +46,19 @@ function numberGenerator() {
     }
 }
 
-
-setTimeout(function() {
-    sezioneNumeri.classList.add('none');
-    
-}, 1000);
-
-function userNumbers(params) {
+function userNumbers() {
     numeriUtente = prompt("inserisci numero")
 }
 
+
+function classeepromt() {
+    sezioneNumeri.classList.add('none');
+    sezioneVisibile = false;
+
+    setTimeout(userNumbers, 50)
+       
+}
+
+
+setTimeout(classeepromt, 1000);
 
